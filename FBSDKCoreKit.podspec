@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
   s.tvos.weak_frameworks = 'CoreLocation', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
 
   s.header_dir = "FBSDKCoreKit"
+  s.module_name = "FBSDKCoreKit"
 
   # set header_mappings_dir to resolve our quoted imports in the +Internal file.
   s.header_mappings_dir = "FBSDKCoreKit/FBSDKCoreKit"
