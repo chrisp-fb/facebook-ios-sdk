@@ -34,7 +34,6 @@ Pod::Spec.new do |s|
   # set header_mappings_dir to resolve our quoted imports in the +Internal file.
   s.header_mappings_dir = "FBSDKCoreKit/FBSDKCoreKit"
 
-  s.public_header_files = 'FBSDKCoreKit/FBSDKCoreKit/*.h'
   s.source_files = 'FBSDKCoreKit/FBSDKCoreKit/**/*.{h,m}'
   s.tvos.exclude_files = 'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.{h,m}',
                           'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.{h,m}',
