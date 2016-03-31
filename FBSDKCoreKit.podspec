@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FBSDKCoreKit"
-  s.version      = "4.10.0"
+  s.version      = "4.10.1"
   s.summary      = "Official Facebook SDK for iOS to access Facebook Platform's core features"
 
   s.description  = <<-DESC
@@ -22,20 +22,13 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
 
   s.source       = { :git => "https://github.com/facebook/facebook-ios-sdk.git",
-                     :tag => "sdk-version-4.10.0"
+                     :tag => "sdk-version-4.10.1"
                     }
 
   s.ios.weak_frameworks = 'Accounts', 'CoreLocation', 'Social', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
   s.tvos.weak_frameworks = 'CoreLocation', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
 
-  s.header_dir = "FBSDKCoreKit"
-  s.pod_target_xcconfig = { 'PRODUCT_NAME' => 'FBSDKCoreKit' }
-
-  # set header_mappings_dir to resolve our quoted imports in the +Internal file.
-  s.header_mappings_dir = "FBSDKCoreKit/FBSDKCoreKit"
-  s.public_header_files = 'FBSDKCoreKit/FBSDKCoreKit/*.h', 'FBSDKCoreKit/FBSDKCoreKit/internal/FBSDKCoreKit+Internal.h'
-  s.private_header_files = 'FBSDKCoreKit/FBSDKCoreKit/internal/FBSDKCoreKit+Internal.h'
-  
+  s.public_header_files = 'FBSDKCoreKit/FBSDKCoreKit/*.h'
   s.source_files = 'FBSDKCoreKit/FBSDKCoreKit/**/*.{h,m}'
   s.tvos.exclude_files = 'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.{h,m}',
                           'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.{h,m}',
